@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.wrapper{
+    width: 75%;
+    background-color: wheat;
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#button-container{
+    height: 1.6em;
+    background-color: grey;
+    position: absolute;
+    right: 0;
+    left: 75%;
+}
+
+#toggle-btn{
+    background-color: black;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+    color: white;
+    text-decoration: none;
+    padding-left: .6em;
+    padding-top: .2em;
+    cursor: pointer;
+}
+
+a:hover, a:visited{
+    color: white;
+    text-decoration: none;
+}
+

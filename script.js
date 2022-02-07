@@ -13,7 +13,8 @@
         document.addEventListener("start-spinner-event", function(event){
             document.querySelector("#loading-spinner").hidden = false;
 
-            console.log(event);
+            
+            
         })
 
         document.addEventListener("stop-spinner-event", function(event){
