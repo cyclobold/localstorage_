@@ -8,18 +8,16 @@
 
 //The IIFE has been assigned to a variable
 const togglr = (function(){
-    /**
-     * I am using IIFE for this example..
-     */
-
-
+   
     //Get a reference to the toggleBtn 
     const toggleBtn = document.querySelector("#toggle-btn");
+
+    //Get a reference to the toogle_phase in the localStorage
     let currentPhase = localStorage.getItem("toggle_phase");
 
 
     /**
-     * This function cannot be accessed from outside this IIFE, 
+     * This particular function cannot be accessed from outside this IIFE, 
      * - It is meant to be used inside here only..
      * 
      * - It ensures our toggle selection persists by checking the localStorage for updates..
@@ -75,7 +73,7 @@ const togglr = (function(){
     //Notice that these functions are placed within a 'return' object
 
     //Also, notice that since we are returning an object, there will be key-value pairs within this returned object. 
-    //Lastly, notice that each key-value pair separated from the next one by a comma.
+    //Lastly, notice that each key-value pair is separated from the next one by a comma.
     return {
 
         
@@ -128,7 +126,7 @@ const togglr = (function(){
             toggleBtn.removeAttribute("onclick");
             toggleBtn.setAttribute("onclick", "togglr.addOnBtn()"); //instead of just addOnBtn(), we use togglr.addOnBtn()
     
-              //Persistence
+            //Persistence
             localStorage.setItem("toggle_phase", "off");
 
 
