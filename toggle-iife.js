@@ -7,10 +7,10 @@
 
 
 //The IIFE has been assigned to a variable
-const togglr = (function(){
-   
+const togglr = (function(window, document){
+
     //Get a reference to the toggleBtn 
-    const toggleBtn = document.querySelector("#toggle-btn");
+    toggleBtn = document.querySelector("#toggle-btn");
 
     //Get a reference to the toogle_phase in the localStorage
     let currentPhase = localStorage.getItem("toggle_phase");
@@ -40,7 +40,7 @@ const togglr = (function(){
             //change background color
             toggleBtn.style.backgroundColor = "red";
     
-            toggleBtn.setAttribute("onclick", "removeOffBtn()");
+            toggleBtn.setAttribute("onclick", "togglr.removeOffBtn()");
     
             // //Persistence
             // localStorage.setItem("toggle_phase", "on");
@@ -57,7 +57,7 @@ const togglr = (function(){
              toggleBtn.style.backgroundColor = "#000";
     
              toggleBtn.removeAttribute("onclick");
-             toggleBtn.setAttribute("onclick", "addOnBtn()");
+             toggleBtn.setAttribute("onclick", "togglr.addOnBtn()");
     
             //   //Persistence
             // localStorage.setItem("toggle_phase", "off");
@@ -136,4 +136,8 @@ const togglr = (function(){
     }
 
 
-}())
+}(window, document))
+
+
+
+togglr.triggerToggleBtn();
